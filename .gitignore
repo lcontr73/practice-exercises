@@ -1,5 +1,4 @@
 .idea/*
 *.iml
 .DS_Store
-keys.js
-/js-api-lecture/js-api-lecture.zip
+*/keys.js
