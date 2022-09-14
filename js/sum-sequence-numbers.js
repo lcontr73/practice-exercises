@@ -1,22 +1,40 @@
+
+
 /**Write a function that translates an input string by replacing each character with a number representing the amount of times that character appears in the string. Then separate each individual number with a different character.
-**/
-
-
+ **/
+//Function counts how often each letter occurs and outputs the amount of times it occurs
+function countLetters(str) {
+    let counts = {};
+    for (let i of str) {
+        if (counts[i]) {
+            counts[i]++
+        } else {
+            counts[i] = 1
+        }
+    }
+    return counts;
+}
+let str = prompt('Please enter a word');
+console.log(countLetters(str));
 
 
 //This will count how often a specific letter appears in a string
-function countLetters(string2, letter) {
-    var string2= 'hello'
-    var letterToCount = 0
-    for (var i = 0; i < string2.length; i++) {
-        if (string2.charAt(i) == letter) {
-            letterToCount += 1;
-        }
-    }
-    return letterToCount;
-}
-
-console.log(countLetters('hello', 'l'));
+// function countLetters(string2, letter) {
+//     var letterToCount = 0
+//     for (var i = 0; i < string2.length; i++) {
+//         if (string2.charAt(i) == letter) {
+//             letterToCount += 1;
+//             let newStr = string2.replace('H', 'letterToCount')
+//         }
+//     }
+//     return letterToCount;
+// }
+//
+// var string2 = prompt('Please enter a word');
+// var letter = prompt('Please enter a letter to check: ');
+//
+// var test = countLetters(string2, letter);
+// alert(test);
 
 
 /**Given an array of integers, write a function that returns an array of 2 integers. The first integer will be the count of the positive integers, and the second integer will be the sum of the negative integers. If the input is empty or null, return an empty array.
