@@ -1,3 +1,24 @@
+/**Write a function that translates an input string by replacing each character with a number representing the amount of times that character appears in the string. Then separate each individual number with a different character.
+**/
+
+
+
+
+//This will count how often a specific letter appears in a string
+function countLetters(string2, letter) {
+    var string2= 'hello'
+    var letterToCount = 0
+    for (var i = 0; i < string2.length; i++) {
+        if (string2.charAt(i) == letter) {
+            letterToCount += 1;
+        }
+    }
+    return letterToCount;
+}
+
+console.log(countLetters('hello', 'l'));
+
+
 /**Given an array of integers, write a function that returns an array of 2 integers. The first integer will be the count of the positive integers, and the second integer will be the sum of the negative integers. If the input is empty or null, return an empty array.
  **/
 var array = [1, -6, 5, 4, 3, -7, -10, 201, -3];
