@@ -1,0 +1,58 @@
+h1 {
+    text-align: center;
+}
+
+button {
+    width: 24%;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+    background: darkseagreen;
+    margin: 0 auto;
+    display: flex;
+    /*flex-direction: column;*/
+}
+
+.display {
+justify-content: center;
+    height: 50px;
+
+}
+
+.col{
+    height: 50px;
+    /*margin-bottom: 20px;*/
+}
+
+#left-operand {
+    padding: 5px;
+    margin: 5px;
+    width: 30%;
+    background: white;
+    border-color: black;
+    border-width: 3px;
+}
+
+#operator {
+    padding: 5px;
+    margin: 5px;
+    width: 30%;
+    background: white;
+    border-color: black;
+    border-width: 3px;
+}
+
+#right-operand {
+    padding: 5px;
+    margin: 5px;
+    width: 30%;
+    background: white;
+    border-color: black;
+    border-width: 3px;
+}
