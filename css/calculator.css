@@ -10,6 +10,14 @@ button {
 
 }
 
+.button {
+    width: 24%;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+
+}
+
 .card {
     width: 400px;
     height: 400px;
