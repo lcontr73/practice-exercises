@@ -5,7 +5,8 @@ function display(value) {
     // if (value===)
     // document.getElementById("left-operand").value+=value;
     if (value === "+" || value === "-" || value ==="*" || value === "/") {
-        document.getElementById("operator").value+=value;
+        document.getElementById("operator").value += value;
+
     } else {
         document.getElementById("left-operand").value+=value;
     }
