@@ -16,15 +16,15 @@ keys.addEventListener('click', e => {
             if (!operator) {
                 if (displayedNumLeft === '') {
                     leftOperand.textContent = keyText
-                } else if (displayedNumLeft !== '' && displayedOperator == ''){
+                } else if (displayedNumLeft !== '' && displayedOperator === ''){
                     leftOperand.textContent = displayedNumLeft + keyText
-                }
-            }
-            if(!operator) {
-                if (displayedNumLeft !== '' && displayedOperator !== '' && displayedNumRight === '') {
+                } else if (displayedNumLeft !== '' && displayedOperator !== '' && displayedNumRight === '') {
                     rightOperand.textContent = keyText
+                } else if (displayedNumRight !== '') {
+                    rightOperand.textContent = displayedNumRight + keyText
                 }
             }
+
             if (operator === 'add' || operator === 'subtract' || operator === 'multiply' || operator === 'divide') {
                 if (displayedOperator === '') {
                     operatorValue.textContent = keyText
