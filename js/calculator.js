@@ -2,19 +2,27 @@ const calculator = document.querySelector('.calculator')
 const keys = calculator.querySelector('.calculatorKeys')
 const leftOperand = document.querySelector('#left-operand')
 const operatorValue = document.querySelector('#operator')
+const rightOperand = document.querySelector('#right-operand')
 
 keys.addEventListener('click', e => {
         if (e.target.matches('button')) {
             const key = e.target
             const operator = key.dataset.operator
             const keyText = key.textContent
-            const displayedNum = leftOperand.textContent
+            const displayedNumLeft = leftOperand.textContent
             const displayedOperator = operatorValue.textContent
+            const displayedNumRight = rightOperand.textContent
+
             if (!operator) {
-                if (displayedNum === '') {
+                if (displayedNumLeft === '') {
                     leftOperand.textContent = keyText
-                } else {
-                    leftOperand.textContent = displayedNum + keyText
+                } else if (displayedNumLeft !== '' && displayedOperator == ''){
+                    leftOperand.textContent = displayedNumLeft + keyText
+                }
+            }
+            if(!operator) {
+                if (displayedNumLeft !== '' && displayedOperator !== '' && displayedNumRight === '') {
+                    rightOperand.textContent = keyText
                 }
             }
             if (operator === 'add' || operator === 'subtract' || operator === 'multiply' || operator === 'divide') {
