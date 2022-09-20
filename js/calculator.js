@@ -1,20 +1,42 @@
-
 const calculator = document.querySelector('.calculator')
 const keys = calculator.querySelector('.calculatorKeys')
+const leftOperand = document.querySelector('#left-operand')
+const operatorValue = document.querySelector('#operator')
 
+keys.addEventListener('click', e => {
+        if (e.target.matches('button')) {
+            const key = e.target
+            const operator = key.dataset.operator
+            const keyText = key.textContent
+            const displayedNum = leftOperand.textContent
+            const displayedOperator = operatorValue.textContent
+            if (!operator) {
+                if (displayedNum === '') {
+                    leftOperand.textContent = keyText
+                } else {
+                    leftOperand.textContent = displayedNum + keyText
+                }
+            }
+            if (operator === 'add' || operator === 'subtract' || operator === 'multiply' || operator === 'divide') {
+                if (displayedOperator === '') {
+                    operatorValue.textContent = keyText
+                }
+            }
+        }
+    }
+)
 
-
-keys.addEventListener('click', e=> {
+keys.addEventListener('click', e => {
     const key = e.target
     const operator = key.dataset.operator
     if (e.target.matches('button')) {
-
     }
-    if(!operator) {
-        console.log('number key')
+    if (!operator) {
+        console.log('numbers')
     }
 
-    if (operator ==='add' || operator === 'subtract' || operator === 'multiply' || operator === 'divide') {
+
+    if (operator === 'add' || operator === 'subtract' || operator === 'multiply' || operator === 'divide') {
         console.log('operator key')
     }
     if (operator === 'clear') {
@@ -24,7 +46,6 @@ keys.addEventListener('click', e=> {
         console.log('equal key')
     }
 })
-
 
 
 // function display(value) {
