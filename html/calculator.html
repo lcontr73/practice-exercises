@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
-    <script src=../js/calculator.js></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/calculator.css">
@@ -19,33 +19,51 @@
             <input class="display" id="left-operand" type="text">
             <input class="col" id="operator" type="text">
             <input class="col" id="right-operand" type="text">
-
-        <div style="padding: 20px 5px;">
-            <div style="padding: 10px 5px;">
-               <input type = 'button' value ="1" onclick="display('1')" class="button"/>
-                <input type = 'button' value ="2" onclick="display('2')" class="button"/>
-                <input type = 'button' value ="3" onclick="display('3')" class="button"/>
-                <input type = 'button' value ="+" onclick="display('+')" class="button"/>
-                <input type = 'button' value ="4" onclick="display('4')" class="button"/>
-                <input type = 'button' value ="5" onclick="display('5')" class="button"/>
-                <input type = 'button' value ="6" onclick="display('6')" class="button"/>
-                <input type = 'button' value ="-" onclick="display('-')" class="button"/>
-                <input type = 'button' value ="7" onclick="display('7')" class="button"/>
-                <input type = 'button' value ="8" onclick="display('8')" class="button"/>
-                <input type = 'button' value ="9" onclick="display('9')" class="button"/>
-                <input type = 'button' value ="*" onclick="display('*')" class="button"/>
-                <input type = 'button' value ="C" onclick="clearInput()" class="button"/>
-                <input type = 'button' value ="0" onclick="display('0')" class="button"/>
-                <input type = 'button' value ="=" onclick="calculate()" class="button"/>
-                <input type = 'button' value ="/" onclick="display('/')" class="button" id="button"/>
-            </div>
-
-            </div>
         </div>
+        <div class='calculatorKeys' style="padding: 30px 5px;">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator" data-operator="add">+</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator" data-operator="subtract">-</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator" data-operator="multiply">*</button>
+            <button class="operator" data-operator="clear">C</button>
+            <button>0</button>
+            <button class="equal" data-operator="calculate">=</button>
+            <button class="operator" data-operator="divide">/</button>
         </div>
+
+
+<!--        <div class='keys' style="padding: 30px 5px;">-->
+<!--            <input type='button' value="1" onclick="display('1')" class="button"/>-->
+<!--            <input type='button' value="2" onclick="display('2')" class="button"/>-->
+<!--            <input type='button' value="3" onclick="display('3')" class="button"/>-->
+<!--            <input type='button' value="+" onclick="display('+')" class="button"/>-->
+<!--            <input type='button' value="4" onclick="display('4')" class="button"/>-->
+<!--            <input type='button' value="5" onclick="display('5')" class="button"/>-->
+<!--            <input type='button' value="6" onclick="display('6')" class="button"/>-->
+<!--            <input type='button' value="-" onclick="display('-')" class="button"/>-->
+<!--            <input type='button' value="7" onclick="display('7')" class="button"/>-->
+<!--            <input type='button' value="8" onclick="display('8')" class="button"/>-->
+<!--            <input type='button' value="9" onclick="display('9')" class="button"/>-->
+<!--            <input type='button' value="*" onclick="display('*')" class="button"/>-->
+<!--            <input type='button' value="C" onclick="clearInput()" class="button"/>-->
+<!--            <input type='button' value="0" onclick="display('0')" class="button"/>-->
+<!--            <input type='button' value="=" onclick="calculate()" class="button"/>-->
+<!--            <input type='button' value="/" onclick="display('/')" class="button" id="button"/>-->
+<!--        </div>-->
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src=../js/calculator.js></script>
 
 </body>
 </html>
