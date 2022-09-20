@@ -30,10 +30,15 @@ keys.addEventListener('click', e => {
                     operatorValue.textContent = keyText
                 }
             }
+            if (operator === 'clear') {
+               operatorValue.textContent = ''
+                leftOperand.textContent = ''
+                rightOperand.textContent = ''
+            }
         }
     }
 )
-
+// Listens for which keys are pressed and console logs if its a number or operator
 keys.addEventListener('click', e => {
     const key = e.target
     const operator = key.dataset.operator
