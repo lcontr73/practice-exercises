@@ -7,52 +7,63 @@ button {
     padding: 0;
     margin: 0;
     height: 50px;
+    background: #E0E0E0;
+}
 
+.operator {
+    background: #F79330
 }
 
 .card {
     width: 400px;
-    height: 400px;
+    height: 350px;
     background: darkseagreen;
     margin: 0 auto;
     display: flex;
-    /*flex-direction: column;*/
+}
+
+.row{
+    text-align: center;
+    font-size: larger;
 }
 
 .display {
-justify-content: center;
     height: 50px;
+    text-align: center;
+    background: #4C4C4C;
 
 }
 
 .col{
     height: 50px;
-    /*margin-bottom: 20px;*/
 }
 
 #left-operand {
     padding: 5px;
     margin: 5px;
     width: 30%;
-    background: white;
+    background: #4C4C4C;
     border-color: black;
     border-width: 3px;
+    color: white;
 }
 
 #operator {
     padding: 5px;
     margin: 5px;
     width: 30%;
-    background: white;
+    background: #4C4C4C;
     border-color: black;
     border-width: 3px;
+    color: white;
 }
 
 #right-operand {
     padding: 5px;
     margin: 5px;
     width: 30%;
-    background: white;
+    background: #4C4C4C;
     border-color: black;
     border-width: 3px;
+    color: white;
 }
