@@ -5,9 +5,10 @@ h1 {
 button {
     width: 24%;
     padding: 0;
-    margin: 0;
+    margin-bottom: 5px;
     height: 50px;
     background: #E0E0E0;
+    border-radius: 10px;
 }
 
 .operator {
@@ -20,18 +21,19 @@ button {
     background: darkseagreen;
     margin: 0 auto;
     display: flex;
+    border-radius: 10px;
 }
 
 .row{
     text-align: center;
     font-size: larger;
+
 }
 
 .display {
     height: 50px;
     text-align: center;
     background: #4C4C4C;
-
 }
 
 .col{
@@ -46,6 +48,7 @@ button {
     border-color: black;
     border-width: 3px;
     color: white;
+    border-radius: 10px;
 }
 
 #operator {
@@ -56,6 +59,7 @@ button {
     border-color: black;
     border-width: 3px;
     color: white;
+    border-radius: 10px;
 }
 
 #right-operand {
@@ -66,4 +70,5 @@ button {
     border-color: black;
     border-width: 3px;
     color: white;
+    border-radius: 10px;
 }
