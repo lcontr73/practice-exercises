@@ -27,6 +27,7 @@ button {
 .row{
     text-align: center;
     font-size: larger;
+    justify-content: space-around;
 
 }
 
@@ -34,10 +35,6 @@ button {
     height: 50px;
     text-align: center;
     background: #4C4C4C;
-}
-
-.col{
-    height: 50px;
 }
 
 #left-operand {
