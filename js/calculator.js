@@ -16,7 +16,7 @@ keys.addEventListener('click', e => {
             if (!operator) {
                 if (displayedNumLeft === '') {
                     leftOperand.textContent = keyText
-                } else if (displayedNumLeft !== '' && displayedOperator === ''){
+                } else if (displayedNumLeft !== '' && displayedOperator === '') {
                     leftOperand.textContent = displayedNumLeft + keyText
                 } else if (displayedNumLeft !== '' && displayedOperator !== '' && displayedNumRight === '') {
                     rightOperand.textContent = keyText
@@ -29,16 +29,40 @@ keys.addEventListener('click', e => {
                 if (displayedOperator === '') {
                     operatorValue.textContent = keyText
                 }
+
             }
             if (operator === 'clear') {
-               operatorValue.textContent = ''
+                operatorValue.textContent = ''
                 leftOperand.textContent = ''
                 rightOperand.textContent = ''
             }
+            if (operator === 'calculate') {
+                leftOperand.textContent = calculate(displayedNumLeft, displayedOperator, displayedNumRight)
+                rightOperand.textContent = ''
+                operatorValue.textContent = ''
+
+            }
         }
+
     }
 )
-// Listens for which keys are pressed and console logs if its a number or operator
+
+//Creating the function to calculate
+const calculate = (displayedNumLeft, displayedOperator, displayedNumRight) => {
+    let result = ''
+    if (displayedOperator === '+') {
+        result = parseFloat(displayedNumLeft) + parseFloat(displayedNumRight)
+    } else if(displayedOperator === '-') {
+        result = parseFloat(displayedNumLeft) - parseFloat(displayedNumRight)
+    }  else if(displayedOperator === '*') {
+        result = parseFloat(displayedNumLeft) * parseFloat(displayedNumRight)
+    }  else if(displayedOperator === '/') {
+    result = parseFloat(displayedNumLeft) / parseFloat(displayedNumRight)
+}
+    return result
+}
+
+// Listens for which keys are pressed and console logs if it's a number or operator
 keys.addEventListener('click', e => {
     const key = e.target
     const operator = key.dataset.operator
@@ -59,25 +83,4 @@ keys.addEventListener('click', e => {
         console.log('equal key')
     }
 })
-
-
-// function display(value) {
-//     // if (value===)
-//     // document.getElementById("left-operand").value+=value;
-//     if (value === "+" || value === "-" || value ==="*" || value === "/") {
-//         document.getElementById("operator").value += value;
-//
-//     } else {
-//         document.getElementById("left-operand").value+=value;
-//     }
-// }
-//
-// function clearInput() {
-//     document.getElementById("left-operand").value="";
-//     document.getElementById("operator").value="";
-// }
-//
-// function calculate() {
-//
-// }
 
