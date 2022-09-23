@@ -13,6 +13,7 @@ keys.addEventListener('click', e => {
             const displayedOperator = operatorValue.textContent;
             const displayedNumRight = rightOperand.textContent;
 
+// Determines where to display output
             if (!operator) {
                 if (displayedNumLeft === '') {
                     leftOperand.textContent = keyText
@@ -25,17 +26,22 @@ keys.addEventListener('click', e => {
                 }
             }
 
+// Determines which text box to display the operator
             if (operator === 'add' || operator === 'subtract' || operator === 'multiply' || operator === 'divide') {
                 if (displayedOperator === '') {
                     operatorValue.textContent = keyText
                 }
 
             }
+
+// Clears all text boxes when the 'C' button is pressed
             if (operator === 'clear') {
                 operatorValue.textContent = ''
                 leftOperand.textContent = ''
                 rightOperand.textContent = ''
             }
+
+// Runs calculation based off of the inputs
             if (operator === 'calculate') {
                 leftOperand.textContent = decimal_test(calculate(displayedNumLeft, displayedOperator, displayedNumRight));
                 rightOperand.textContent = ''
@@ -43,7 +49,6 @@ keys.addEventListener('click', e => {
 
             }
         }
-
     }
 )
 
