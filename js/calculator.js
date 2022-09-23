@@ -1,17 +1,17 @@
-const calculator = document.querySelector('.calculator')
-const keys = calculator.querySelector('.calculatorKeys')
-const leftOperand = document.querySelector('#left-operand')
-const operatorValue = document.querySelector('#operator')
-const rightOperand = document.querySelector('#right-operand')
+const calculator = document.querySelector('.calculator');
+const keys = calculator.querySelector('.calculatorKeys');
+const leftOperand = document.querySelector('#left-operand');
+const operatorValue = document.querySelector('#operator');
+const rightOperand = document.querySelector('#right-operand');
 
 keys.addEventListener('click', e => {
         if (e.target.matches('button')) {
-            const key = e.target
-            const operator = key.dataset.operator
-            const keyText = key.textContent
-            const displayedNumLeft = leftOperand.textContent
-            const displayedOperator = operatorValue.textContent
-            const displayedNumRight = rightOperand.textContent
+            const key = e.target;
+            const operator = key.dataset.operator;
+            const keyText = key.textContent;
+            const displayedNumLeft = leftOperand.textContent;
+            const displayedOperator = operatorValue.textContent;
+            const displayedNumRight = rightOperand.textContent;
 
             if (!operator) {
                 if (displayedNumLeft === '') {
@@ -37,7 +37,7 @@ keys.addEventListener('click', e => {
                 rightOperand.textContent = ''
             }
             if (operator === 'calculate') {
-                leftOperand.textContent = (calculate(displayedNumLeft, displayedOperator, displayedNumRight)).toFixed(4);
+                leftOperand.textContent = decimal_test(calculate(displayedNumLeft, displayedOperator, displayedNumRight));
                 rightOperand.textContent = ''
                 operatorValue.textContent = ''
 
@@ -47,31 +47,40 @@ keys.addEventListener('click', e => {
     }
 )
 
-//Creating the function to calculate
+//function for determining if value is a whole number
+function decimal_test(n) {
+    let test = (n - Math.floor(n)) !== 0;
+    if (test)
+        return n.toFixed(2); // fixes to two decimal places
+    else
+        return n;
+}
+
+
+//Function to calculate solution
 const calculate = (displayedNumLeft, displayedOperator, displayedNumRight) => {
     let result = ''
     if (displayedOperator === '+') {
         result = parseFloat(displayedNumLeft) + parseFloat(displayedNumRight)
-    } else if(displayedOperator === '-') {
+    } else if (displayedOperator === '-') {
         result = parseFloat(displayedNumLeft) - parseFloat(displayedNumRight)
-    }  else if(displayedOperator === '*') {
+    } else if (displayedOperator === '*') {
         result = parseFloat(displayedNumLeft) * parseFloat(displayedNumRight)
-    }  else if(displayedOperator === '/') {
-    result = parseFloat(displayedNumLeft) / parseFloat(displayedNumRight)
-}
+    } else if (displayedOperator === '/') {
+        result = parseFloat(displayedNumLeft) / parseFloat(displayedNumRight)
+    }
     return result
 }
 
 // Listens for which keys are pressed and console logs if it's a number or operator
 keys.addEventListener('click', e => {
-    const key = e.target
-    const operator = key.dataset.operator
+    const key = e.target;
+    const operator = key.dataset.operator;
     if (e.target.matches('button')) {
     }
     if (!operator) {
         console.log('numbers')
     }
-
 
     if (operator === 'add' || operator === 'subtract' || operator === 'multiply' || operator === 'divide') {
         console.log('operator key')
