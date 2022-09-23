@@ -31,7 +31,6 @@ keys.addEventListener('click', e => {
                 if (displayedOperator === '') {
                     operatorValue.textContent = keyText
                 }
-
             }
 
 // Clears all text boxes when the 'C' button is pressed
@@ -46,7 +45,6 @@ keys.addEventListener('click', e => {
                 leftOperand.textContent = decimal_test(calculate(displayedNumLeft, displayedOperator, displayedNumRight));
                 rightOperand.textContent = ''
                 operatorValue.textContent = ''
-
             }
         }
     }
