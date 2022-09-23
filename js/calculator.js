@@ -37,7 +37,7 @@ keys.addEventListener('click', e => {
                 rightOperand.textContent = ''
             }
             if (operator === 'calculate') {
-                leftOperand.textContent = calculate(displayedNumLeft, displayedOperator, displayedNumRight)
+                leftOperand.textContent = (calculate(displayedNumLeft, displayedOperator, displayedNumRight)).toFixed(4);
                 rightOperand.textContent = ''
                 operatorValue.textContent = ''
 
