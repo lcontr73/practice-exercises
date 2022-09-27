@@ -33,3 +33,14 @@ var amazonHoursThisWeek = prompt('How many hours did you work at amazon this wee
 var facebookHoursThisWeek = prompt('How many hours did you work at amazon this week?');
 
 alert((parseFloat(googlePayPerHour) * parseFloat(googleHoursThisWeek)) + (parseFloat(amazonPayPerHour) * parseFloat(amazonHoursThisWeek)) + (parseFloat(facebookPayPerHour) * parseFloat(facebookHoursThisWeek)));
+
+/**
+A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
+ **/
+var isClassNotFull = confirm('Click "OK" if the class is not full!!');
+var isNoClassConflict = confirm('Click "OK" if the class does NOT CONFLICT with the students current schedule!!')
+
+if(isNoClassConflict && isClassNotFull === true) {
+    alert('The student can enroll for this class!!');
+} else
+    alert('The student CAN NOT enroll for this class!!');
