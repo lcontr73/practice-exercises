@@ -1,3 +1,5 @@
+"use strict";
+
 const calculator = document.querySelector('.calculator');
 const keys = calculator.querySelector('.calculatorKeys');
 const leftOperand = document.querySelector('#left-operand');
