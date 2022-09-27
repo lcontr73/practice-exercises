@@ -21,4 +21,15 @@ var priceForOneMoviePerDay = (parseFloat(pricePerDay).toFixed(2))
 
 alert('$' + (((priceForOneMoviePerDay)) * (parseInt(littleMermaidDays) + parseInt(brotherBearDays) + parseInt(herculesDays))).toFixed(2));
 
+/**
+Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
+**/
+var googlePayPerHour = prompt('How much is google paying you per hour?');
+var amazonPayPerHour = prompt('How much is amazon paying you per hour?');
+var facebookPayPerHour = prompt('How much is facebook paying you per hour?');
 
+var googleHoursThisWeek = prompt('How many hours did you work at google this week?');
+var amazonHoursThisWeek = prompt('How many hours did you work at amazon this week?');
+var facebookHoursThisWeek = prompt('How many hours did you work at amazon this week?');
+
+alert((parseFloat(googlePayPerHour) * parseFloat(googleHoursThisWeek)) + (parseFloat(amazonPayPerHour) * parseFloat(amazonHoursThisWeek)) + (parseFloat(facebookPayPerHour) * parseFloat(facebookHoursThisWeek)));
