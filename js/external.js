@@ -43,4 +43,23 @@ var isNoClassConflict = confirm('Click "OK" if the class does NOT CONFLICT with 
 if(isNoClassConflict && isClassNotFull === true) {
     alert('The student can enroll for this class!!');
 } else
-    alert('The student CAN NOT enroll for this class!!');
+    alert('WARNING!! The student CAN NOT enroll for this class!!');
+
+
+/**
+ A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
+ **/
+var isOfferExpired = confirm('Click "OK" if the offer is still valid!!');
+var isMoreThanTwoPurchases = confirm('Click "OK" if the customer is purchasing more than two items!!');
+var isPremiumMember = confirm('Click "OK" if the customer is a premium member!!');
+
+if ((isOfferExpired && isMoreThanTwoPurchases) || isPremiumMember) {
+    alert('Apply the product offer to the customers purchase!!')
+} else if (!isPremiumMember && (!isOfferExpired || !isMoreThanTwoPurchases)) {
+    var isBecomePremiumMember = confirm('Would you like to become a premium member and get special product offers on this and future purchases')
+    if (isBecomePremiumMember === true) {
+        alert('Apply the product offer to the customers purchase!!');
+    } else
+        alert('You chose not to become a premium member.');
+    alert('The product offer CANNOT be applied to this customers purchase!!');
+}
