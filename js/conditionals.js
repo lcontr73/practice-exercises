@@ -33,37 +33,42 @@ function analyzeColorSwitch(colorNameAgain) {
         default:
             return ('I don\'t know much about ' + colorNameAgain + '.');
             break;
-    }}
-    console.log(analyzeColorSwitch('blue'));
-    console.log(analyzeColorSwitch('red'));
-    console.log(analyzeColorSwitch('green'));
-    /**
-     * Example:
-     *  > analyzeColor('blue') // returns "blue is the color of the sky"
-     *  > analyzeColor('red') // returns "Strawberries are red"
-     *
-     *
-     *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
-     *
-     * You should use an if-else-if-else block to return different messages.
-     *
-     * Test your function by passing various string literals to it and
-     * console.logging the function's return value
-     */
+    }
+}
+
+console.log(analyzeColorSwitch('blue'));
+console.log(analyzeColorSwitch('red'));
+console.log(analyzeColorSwitch('green'));
+/**
+ * Example:
+ *  > analyzeColor('blue') // returns "blue is the color of the sky"
+ *  > analyzeColor('red') // returns "Strawberries are red"
+ *
+ *
+ *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
+ *
+ * You should use an if-else-if-else block to return different messages.
+ *
+ * Test your function by passing various string literals to it and
+ * console.logging the function's return value
+ */
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+
+console.log(analyzeColor(randomColor));
+console.log(analyzeColorSwitch(randomColor));
 
 /**
  * TODO:
@@ -76,7 +81,8 @@ function analyzeColorSwitch(colorNameAgain) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+var pickAColor = prompt('Please pick a color!!');
+alert(analyzeColor(pickAColor.toLowerCase()));
 /* ########################################################################## */
 
 /**
@@ -89,7 +95,28 @@ function analyzeColorSwitch(colorNameAgain) {
  *
  * Write a function named `calculateTotal` which accepts a lucky number and total
  * amount, and returns the discounted price.
- *
+ **/
+
+var random = Math.floor(Math.random() * (6));
+
+function calculateTotal(luckyNumber, totalAmount) {
+    if (luckyNumber === 0) {
+        return ('You have no discount you have to pay: ' + totalAmount)
+    } else if (luckyNumber === 1) {
+        return ('You have a 10% discount and your new balance is: ' + (totalAmount - (totalAmount * .1)))
+    } else if (luckyNumber === 2) {
+        return ('You have a 25% discount and your new balance is: ' + (totalAmount - (totalAmount * .25)))
+    } else if (luckyNumber === 3) {
+        return ('You have a 35% discount and your new balance is: ' + (totalAmount - (totalAmount * .35)))
+    } else if (luckyNumber === 4) {
+        return ('You have a 50% discount and your new balance is: ' + (totalAmount - (totalAmount * .50)))
+    } else if (luckyNumber === 5) {
+        return ('Congratulations, you are our lucky winner and will get all your purchases for free!!')
+    }
+}
+
+alert(calculateTotal(random, 100));
+/**
  * Example:
  * calculateTotal(0, 100) // returns 100
  * calculateTotal(4, 100) // returns 50
