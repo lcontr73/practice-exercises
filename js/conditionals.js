@@ -135,14 +135,48 @@ alert(calculateTotal(random, 100));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+var userBill = prompt('What is your total bill??')
 
+var newUserBill = calculateTotal(luckyNumber, userBill);
+alert('Your lucky number is: ' + luckyNumber);
+alert('Your price before the discount is $' + userBill);
+alert(newUserBill);
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
- *
+ **/
+var playAGame = confirm('Would you like to play a number game??')
+if (playAGame === true) {
+    var numberPicked = prompt('Please pick a number!!')
+
+} else {
+    alert('I guess you don\'t want to play');
+}
+
+//this determines if the value is not a number
+if(isNaN(parseFloat(numberPicked))) {
+    alert('This is not a number, please try again.')
+}
+//this determines if a number is even
+if (numberPicked % 2 === 0) {
+    console.log('The number is even.')
+} else {
+    console.log('The number is odd.')
+}
+
+//this determines if value is positive or negative
+if(numberPicked >= 0) {
+    console.log('The number is positive')
+} else {
+    console.log('The number is negative')
+}
+
+//this takes the number and adds 100 to it
+console.log(parseFloat(numberPicked) + 100)
+/**
  * - whether the number is even or odd
  * - what the number plus 100 is
  * - if the number is negative or positive
