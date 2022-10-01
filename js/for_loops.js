@@ -45,3 +45,8 @@ function pyramid() {
     }
 }
 pyramid();
+
+//count down from 100 by 5
+for (var i = 100; i > 0; i-=5) {
+   console.log(i);
+}
