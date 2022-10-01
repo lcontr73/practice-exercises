@@ -28,12 +28,20 @@ function randomNumberOutput() {
             if (randomNumber % 2 === 0) {
                 document.write(randomNumber + ' is an even number!!' + '<br>');
             } else {
-               document.write(randomNumber + ' is an odd number!!' + '<br>');
+                document.write(randomNumber + ' is an odd number!!' + '<br>');
             }
         }
     } else {
         alert('You chose not to play.');
     }
 }
+randomNumberOutput();
 
-
+//number pyramid
+function pyramid() {
+    for (var i = 1; i <= 9; i++) {
+        var string = i.toString().repeat(i)
+        document.write(string + '<br>')
+    }
+}
+pyramid();
