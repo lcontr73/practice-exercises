@@ -76,3 +76,23 @@ for (let x = 0; x <= 50; x++) {
         console.log(x);
     }
 }
+
+
+
+//while loops
+let z = 1;
+let x = 1;
+while(z <= 16) {
+    z++;
+    x = x*2
+    console.log(x);
+}
+
+function numbersDoubled (start, finish) {
+    while(start <= finish) {
+        console.log(start);
+        start=start * 2;
+    }
+}
+
+numbersDoubled(2,65536)
