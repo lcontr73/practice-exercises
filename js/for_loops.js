@@ -1,4 +1,5 @@
 "use strict";
+(function () {
 
 //function to create a multiplication table up to 10 using a prompt to input a number
 let num1 = prompt('Please pick a number!!')
@@ -96,3 +97,27 @@ function numbersDoubled (start, finish) {
 }
 
 numbersDoubled(2,65536)
+
+
+//do while
+var allCones = Math.floor(Math.random() * 50) + 50;
+console.log(allCones);
+function iceCreamSales(conesLeft) {
+    do {
+        var amountToPurchase = Math.floor(Math.random() * 5) + 1;
+       conesLeft = conesLeft - amountToPurchase;
+        if (amountToPurchase < conesLeft) {
+            console.log(amountToPurchase + ' cones sold')
+        } else if (amountToPurchase > conesLeft) {
+            console.log('Cannot sell you ' + amountToPurchase + ' I only have ' + conesLeft + ' left.')
+        } else if (amountToPurchase === conesLeft) {
+            console.log('Yay! I sold them all!')
+        }
+
+    } while (conesLeft > 0);
+
+}
+
+return iceCreamSales(allCones);
+
+})();
