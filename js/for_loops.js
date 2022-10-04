@@ -50,3 +50,29 @@ pyramid();
 for (var i = 100; i > 0; i-=5) {
    console.log(i);
 }
+
+// Break and Continue
+// Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
+// var oddNumber;
+//
+// do {
+//     oddNumber = prompt('Please pick an odd number between 1 and 50.');
+// } while (oddNumber % 2 === 0)
+
+while (true) {
+    var oddNumber = prompt('Please pick an odd number between 1 and 50.');
+    if(oddNumber % 2 === 1) {
+        break;
+    }
+    alert('Please try again.')
+}
+
+for (let x = 0; x <= 50; x++) {
+    if (x === parseFloat(oddNumber)) {
+        console.log('Yikes! Skipping number: ', oddNumber)
+        continue;
+    }
+    if (x % 2 !== 0) {
+        console.log(x);
+    }
+}
