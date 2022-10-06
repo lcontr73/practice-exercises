@@ -25,8 +25,10 @@
      * accessing each element's index.
      */
 
-    for (var i = 0; i < names.length; i++)
-    console.log(names[i]);
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
     /**
      * TODO:
@@ -34,11 +36,17 @@
      * array.
      */
 
+    for (var i = 0; i < names.length; i++)
+        console.log(names[i]);
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(name){
+        console.log(name);
+    });
 
     /**
      * TODO:
