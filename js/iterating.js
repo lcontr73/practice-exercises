@@ -62,4 +62,25 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+   var numbersArray = [1,2,3,4,9];
+
+   //first
+   function firstNumber (numbersArray) {
+       console.log(numbersArray[0]);
+   }
+   firstNumber(numbersArray);
+
+   //second
+   function secondNumber(numbersArray){
+       console.log(numbersArray[1]);
+   }
+   secondNumber(numbersArray)
+
+    //last
+    function lastNumber(numbersArray){
+       var lastItem = numbersArray[numbersArray.length - 1]
+       console.log(lastItem)
+    }
+    lastNumber(numbersArray)
+
 })();
