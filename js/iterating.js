@@ -7,11 +7,17 @@
      * 'names'.
      */
 
+    var names = ['Bob', 'Sara', 'Tom', 'Jill'];
+
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+
+    console.log(names.length);
+
 
     /**
      * TODO:
@@ -19,11 +25,15 @@
      * accessing each element's index.
      */
 
+    for (var i = 0; i < names.length; i++)
+    console.log(names[i]);
+
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
+
 
     /**
      * TODO:
