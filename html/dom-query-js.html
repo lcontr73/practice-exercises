@@ -47,12 +47,17 @@
         console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
+        // TODO: Set text color of li with dbid = 1 to blue
        for (var i = 0; i < listItems.length; i ++){
-           if (i %2 === 0) {
+           var dbId = listItems[i].getAttribute('data-dbid');
+           if (dbId === '1') {
+               listItems[i].style.color = 'green';
+           } else if (i %2 === 0) {
                listItems[i].style.color = 'red';
            }
        }
-        // TODO: Set text color of li with dbid = 1 to blue
+
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // var subParagraphs = ;
