@@ -82,6 +82,16 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    var books = [
+        {title: 'Harry Potter', author: {firstName: 'Hank', lastName: 'Hill'}},
+        {title: 'The Hunger Games', author: {firstName: 'Homer', lastName: 'Simpson'}},
+        {title: 'book3', author: {firstName: 'firstName3', lastName: 'lastName3'}},
+        {title: 'book4', author: {firstName: 'firstName4', lastName: 'lastName4'}},
+        {title: 'book5', author: {firstName: 'firstName5', lastName: 'lastName5'}}
+    ];
+console.log(books[0].title);
+console.log(books[0].author.firstName);
+console.log(books[0].author.lastName);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -107,6 +117,14 @@
      *      ...
      */
 
+
+    books.forEach(function(book) {
+        var bookNumber = (books.indexOf(book) + 1);
+        console.log('Book #' + bookNumber);
+        console.log('Title: ' + book.title);
+        console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName)
+        console.log('---')
+    })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -118,4 +136,25 @@
      *   `showBookInfo` function.
      */
 
+
+
+    function createBook(title, authorFirstName, authorLastName) {
+        var newBook = {
+            title: title,
+            author: {firstName: authorFirstName, lastName: authorLastName}
+        }
+        return newBook
+    }
+   // console.log(createBook('new book', 'Bob', 'Smith'))
+
+
+    var testBook = {title: 'Harry Potter', author: {firstName: 'Hank', lastName: 'Hill'}}
+
+        function showBookInfo(book) {
+        // console.log('Book #' + (testBook.indexOf(book) + 1));
+            console.log('Title: ' + testBook.title);
+            console.log('Author: ' + testBook.author.firstName + ' ' + testBook.author.lastName)
+            console.log('---')
+    }
+    showBookInfo(testBook)
 })();
