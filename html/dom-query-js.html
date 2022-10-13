@@ -25,16 +25,30 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">Button 1</button>
+<button id="btn2">Button 2</button>
+<button id="btn3">Button 3</button>
+<button id="btn4">Button 4</button>
+
 <script>
     (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById('main-header');
         console.log(mainHeader.innerHTML);
+        //
+        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // mainHeader.innerHTML = 'JavaScript is Cool';
+        // console.log(mainHeader.innerHTML);
+        // Event Listener to change the main header
+        var changeHeader = function (event) {
+            mainHeader.innerHTML = 'JavaScript is Cool';
+        }
+        document.getElementById('btn1').addEventListener('click', changeHeader)
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = 'JavaScript is Cool';
-        console.log(mainHeader.innerHTML);
+
+
+
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
         console.log(subHeader.innerHTML);
