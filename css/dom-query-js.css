@@ -1,0 +1,10 @@
+body {
+    padding: 20px;
+}
+#main-header {
+    text-align: center;
+    padding: 20px;
+}
+#btn1 {
+    float: right;
+}
