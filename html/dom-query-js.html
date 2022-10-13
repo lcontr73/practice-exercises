@@ -54,7 +54,12 @@
         console.log(subHeader.innerHTML);
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue';
+       var changeColor = function (event) {
+           subHeader.style.color = 'blue';
+       }
+       document.getElementById('btn2').addEventListener('click', changeColor)
+
+
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
