@@ -16,3 +16,8 @@ h1 {
 .paragraphs {
     padding: 25px;
 }
+
+.kayak {
+    display: flex;
+    justify-content: center;
+}
